@@ -51,3 +51,23 @@ Some of the changes I've done with ExplorerPatcher are redundant with my presona
 - This PC -> Properties no longer redirects to Settings app
 
 Currently, the installation of ExplorerPatcher can't be automated due to a lack of a way to import the settings from command line, see valinet/ExplorerPatcher#1245.
+
+### AutoHotkey
+
+The homepage of [AutoHotkey](https://www.autohotkey.com/) says it all: the ultimate automation scripting language for Windows.
+
+Currently, there is just one script, as I manage my rebinds and macros in QMK.
+
+#### vd.ahk
+
+After 8 years of sticking to tilling window managers (mostly [bspwm](https://github.com/baskerville/bspwm)), I'm used to utilizing multiple workspaces or virtual desktops, whatever you call it. Virtual desktops in Windows are a bit weird, as there is no native way of assigning your own shortcuts (like on macOS, for example). I wrote a simple script that utilizes [VirtualDesktopAccessor](https://github.com/Ciantic/VirtualDesktopAccessor) and fixes this issue.
+
+Default keybinds:
+  - CapsLock+<1-4> - goes to a respective virtual desktop
+  - CapsLock+<1-4> while holding LMB - as above, but you get to keep the window that you're holding
+  - Shift+CapsLock+<1-4> - moves foreground window to a respective virtual desktop
+  - Shift+Enter - either opens a Windows Terminal or brings the current instance of it to the foreground
+
+I'm aware of the quake terminal that's built into Windows Terminal, but it's broken if you happen to use virtual desktops. That and the fact that I'm not a big fan of quake terminal is the reason why it's a part of this script.
+
+Also, it's quite similar to the [example](https://github.com/Ciantic/VirtualDesktopAccessor/blob/rust/example.ah2), which also covers more functionalities of the library, so I recommend giving it a look.
